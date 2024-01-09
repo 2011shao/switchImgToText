@@ -1,0 +1,278 @@
+
+
+
+
+body {
+	/* background-color: #f1f1f1; */
+	font-size: 28upx;
+	color: #333333;
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+page,
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+
+/* .themecolor {
+	color: rgb(41, 121, 255);
+}
+.bt-bg-theme {
+	background-color: #04A75D;
+}
+
+.bg-theme {
+	background-color: rgb(41, 121, 255);
+} */
+.themecolor {
+	color: rgb(41, 121, 255);
+}
+
+.themecolor2 {
+	color: #00A985;
+}
+
+.bt-bg-theme {
+	background-color: rgb(41, 121, 255);
+}
+
+.bg-theme {
+	background-color: rgb(41, 121, 255);
+}
+
+.bg-theme2 {
+	background-color: #00A985;
+}
+
+.border-1 {
+	border: 1px solid rgb(41, 121, 255);
+}
+
+.border-2 {
+	border: 2px solid rgb(41, 121, 255);
+}
+
+.bg-theme-jb {
+	background-color: linear-gradient(270deg, #EE4D3A 0%, rgb(41, 121, 255) 100%);
+}
+
+.bg-theme-jb-light {
+	background-color: linear-gradient(270deg, rgba(206, 32, 210, 1) 0%, rgba(113, 37, 255, 1) 100%);
+}
+
+.color-tt {
+	color: #3D414B;
+}
+
+.color-time {
+	color: #8A8D96;
+}
+
+.color-222 {
+	color: #222;
+}
+
+.color-333 {
+	color: #333;
+}
+
+.color-666 {
+	color: #666;
+}
+
+.color-999 {
+	color: #999;
+}
+
+.color-ccc {
+	color: #ccc;
+}
+
+.color-ddd {
+	color: #ddd;
+}
+
+.color-eee {
+	color: #eee;
+}
+
+.text-light {
+	color: #919191;
+}
+
+.color-blue {
+	color: #0075c4;
+}
+
+.color-orange {
+	color: rgb(41, 121, 255);
+}
+.color-wain {
+	color: yellow;
+}
+.color-zan{
+	color: #fed50b;
+}
+
+.bg-orange {
+	background-color: rgb(41, 121, 255);
+}
+
+.bg-blue {
+	background-color: #0075c4;
+}
+
+.bg-999 {
+	background-color: #999;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.font-300 {
+	font-weight: 300;
+}
+
+.text-pricen {
+	color: #fd3f31;
+}
+
+.text-pricem {
+	color: #fd3f31;
+}
+
+.text-price-delete {
+	text-decoration: line-through;
+	color: #ccc;
+}
+
+.text-pricem::before {
+	color: inherit;
+	content: "¥";
+	font-size: 80%;
+	margin-right: 4rpx;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.padding-30 {
+	padding: 30rpx;
+}
+.border-bottom-eee {
+	border-bottom: 2rpx solid #F5F5F5 !important;
+}
+
+text {
+	font-size: 28rpx;
+	color: #222;
+	text-align: left;
+	font-family: PingFangSC-Regular,
+		, -apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif;
+}
+
+input {
+	font-size: 28rpx;
+	color: #222;
+	text-align: left;
+	/* font-family: -apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif; */
+}
+
+.uni-input-placeholder {
+	color: #aaa999;
+}
+
+.commit_bt {
+	height: 90rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 45rpx;
+	background-color: rgb(41, 121, 255);
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.commit_bt[disabled] {
+	opacity: 0.4;
+	background-color: rgb(41, 121, 255);
+}
+
+.commit_bt text {
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+.DINPro-Bold {
+	font-family: DINPro-Bold;
+}
+
+@media screen and (min-width: 500px) and (min-height: 500px) {
+	:deep(.uni-picker-container .uni-picker-custom) {
+		width: 460px;
+		margin-left: -20px;
+	}
+}
+
+.coverBg {
+	position: absolute;
+	top: 0rpx;
+	left: 0rpx;
+	right: 0rpx;
+	bottom: 0rpx;
+	background-color: transparent;
+	border: none;
+}
+
+.nbt {
+	background-color: transparent;
+	border: none;
+}
+
+.nbt::after {
+	border: none;
+}
+
+
+/* >>>img{
+	width: 750rpx;
+	min-width: 750rpx;
+} */

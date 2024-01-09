@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4175146 */
+  src: url('//at.alicdn.com/t/c/font_4175146_0of7y182cv3.woff2?t=1692091618826') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4175146_0of7y182cv3.woff?t=1692091618826') format('woff'),
+       url('//at.alicdn.com/t/c/font_4175146_0of7y182cv3.ttf?t=1692091618826') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zip:before {
+  content: "\e741";
+}
+
+.icon-batch-delete:before {
+  content: "\e848";
+}
+
+.icon-oppo-fill-round:before {
+  content: "\e68c";
+}
+
+.icon-vivo-fill-round:before {
+  content: "\e699";
+}
+
+.icon-icon-xiaomiguishu:before {
+  content: "\e613";
+}
+
+.icon-huawei1:before {
+  content: "\e610";
+}
+
+.icon-piliangyiku:before {
+  content: "\e606";
+}
+
+.icon-Excel:before {
+  content: "\e83b";
+}
+
+.icon-DOCX:before {
+  content: "\e614";
+}
