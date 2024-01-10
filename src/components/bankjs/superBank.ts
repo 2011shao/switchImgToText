@@ -3,8 +3,7 @@
 
 import axios from "axios";
 
-var root = this;
-var cardTypeMap = {
+const cardTypeMap = {
     DC: "储蓄卡",
     CC: "信用卡",
     SCC: "准贷记卡",
@@ -16,8 +15,8 @@ function isFunction(fn) {
 }
 
 function extend(target, source) {
-    var result = {};
-    var key;
+    let result = {};
+    let key;
     target = target || {};
     source = source || {};
     for (key in target) {
@@ -39,7 +38,7 @@ function getCardTypeName(cardType) {
     }
     return undefined;
 }
-var bankcardList = [{
+const bankcardList = [{
     bankName: "中国邮政储蓄银行",
     bankCode: "PSBC",
     patterns: [{
@@ -1502,8 +1501,8 @@ var bankcardList = [{
 }]
 
 function getBankNameByBankCode(bankcode) {
-    for (var i = 0, len = bankcardList.length; i < len; i++) {
-        var bankcard = bankcardList[i];
+    for (let i = 0, len = bankcardList.length; i < len; i++) {
+        const bankcard = bankcardList[i];
         if (bankcode == bankcard.bankCode) {
             return bankcard.bankName;
         }
@@ -1512,13 +1511,13 @@ function getBankNameByBankCode(bankcode) {
 }
 
 function _getBankInfoByCardNo(cardNo, cbf) {
-    for (var i = 0, len = bankcardList.length; i < len; i++) {
-        var bankcard = bankcardList[i];
-        var patterns = bankcard.patterns;
-        for (var j = 0, jLen = patterns.length; j < jLen; j++) {
-            var pattern = patterns[j];
+    for (let i = 0, len = bankcardList.length; i < len; i++) {
+        const bankcard = bankcardList[i];
+        const patterns = bankcard.patterns;
+        for (let j = 0, jLen = patterns.length; j < jLen; j++) {
+            const pattern = patterns[j];
             if ((new RegExp(pattern.reg)).test(cardNo)) {
-                var info = extend(bankcard, pattern);
+                let info = extend(bankcard, pattern);
                 delete info['patterns'];
                 delete info['reg'];
                 info['cardTypeName'] = getCardTypeName(info['cardType']);
@@ -1530,7 +1529,7 @@ function _getBankInfoByCardNo(cardNo, cbf) {
 }
 
 function _getBankInfoByCardNoAsync(cardNo, cbf) {
-    var errMsg = "";
+    let errMsg = "";
     _getBankInfoByCardNo(cardNo, function (err, info) {
         if (!err && info) {
             return cbf(null, info);
@@ -1544,7 +1543,7 @@ function _getBankInfoByCardNoAsync(cardNo, cbf) {
 function getBankBin(cardNo, cbf) {
 
     return new Promise(function (resolve, reject) {
-        var errMsg = '';
+        let errMsg = '';
         if (isNaN(cardNo)) {
             cardNo = parseInt(cardNo);
             if (isNaN(cardNo)) {
