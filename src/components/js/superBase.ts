@@ -2,21 +2,18 @@ import { bitable, FieldType, ITable } from "@lark-base-open/js-sdk";
 import { ref } from "vue";
 let bit_table: ITable;
 const bit_loading = ref(false);
-const bit_all_fieldList = ref<any>([{ name: "ddd", id: "111", type: 1 }]);
+const bit_all_fieldList = ref<any>([]);
 const bit_all_table = ref<any>([])
 const bit_select_dic = ref<any>({
   baseId: "", fieldId: "", recordId: "", tableId: "", viewId: "",
 })
-const import_table_id=ref('')//导入人员时的表
-const export_table_id=ref('')//导出人员时的表
+const import_table_id = ref('')//导入人员时的表
+const export_table_id = ref('')//导出人员时的表
 
 bitable.base.onSelectionChange((event) => {
   // initBaeData();
-  console.log('对对对', event)
   if (event.data.tableId != bit_select_dic.value.tableId) {
-
     initBaeData()
-
   }
   bit_select_dic.value = event.data
 
@@ -37,7 +34,7 @@ async function getAllField(loadCache = false) {
   bit_loading.value = false;
 }
 initBaeData();
-export { initBaeData, getAllField,import_table_id,export_table_id }
+export { initBaeData, getAllField, import_table_id, export_table_id }
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 新增字段
