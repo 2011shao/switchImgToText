@@ -102,7 +102,7 @@ async function exportVoid() {
     target_filed_dic[key] = fileId;
   }
 
-  const recordList = await bit_table.getRecordList();
+  // const recordList = await bit_table.getRecordList();
   const view = await bit_table.getActiveView();
   const recordIdList = await view.getVisibleRecordIdList();
   let newDataArr = [];
@@ -110,11 +110,15 @@ async function exportVoid() {
   const attachmentField = await bit_table.getField(
     bit_import_dic.value.origin_filed
   );
-  for (const record of recordList) {
-    if (!recordIdList.includes(record.id)) {
+  for (const recordId of recordIdList) {
+    const recordValue = await bit_table.getRecordById(recordId);
+    if (!recordValue["fields"][bit_import_dic.value.origin_filed]) {
+      i++;
+      progress.value = (i / recordIdList.length).toFixed(2);
       continue;
     }
-    const imgArr = await attachmentField.getAttachmentUrls(record.id);
+
+    const imgArr = await attachmentField.getAttachmentUrls(recordId);
     let textContent = [];
     for (let url of imgArr) {
       const textRes = await axios.get(
@@ -126,7 +130,7 @@ async function exportVoid() {
       }
     }
     const dic = {
-      recordId: record.id,
+      recordId: recordId,
       fields: {},
     };
     if (selectMode.value == "all") {
@@ -139,8 +143,9 @@ async function exportVoid() {
 
     newDataArr.push(dic);
     i++;
-    progress.value = parseInt(i / recordIdList.length);
+    progress.value = (i / recordIdList.length).toFixed(2);
   }
+  debugger;
   await bit_table.setRecords(newDataArr);
   Message.success("解析完成");
   buttonLoading.value = false;
